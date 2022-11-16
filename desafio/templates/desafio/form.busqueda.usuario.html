@@ -1,0 +1,23 @@
+{% extends "desafio/base.html" %}
+
+{% block contenido %}
+<div>
+    <h2>Buscar usuario por nombre</h2>
+    <form action="" method="get">
+        <label for="Nombre"></label><input type="text" name="nombre" id="nombre" maxlength="40">
+        <input type="submit" value="Buscar este usuario">
+    </form>
+</div>
+<div>
+    {% if busquedaUsuario %}
+        <h3>Resultados de búsqueda</h3>
+        {% for usuario in busquedaUsuario %}
+            <div>
+                <p>El usuario {{usuario.username}} se registró con el nombre de {{usuario.nombre}}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No hay usuarios registrados con ese nombre</p>
+    {% endif %}
+    </div>
+{% endblock %}

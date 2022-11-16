@@ -55,7 +55,7 @@ ROOT_URLCONF = 'entrega.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['desafio/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

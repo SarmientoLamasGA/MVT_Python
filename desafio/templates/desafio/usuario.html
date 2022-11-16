@@ -1,0 +1,17 @@
+{% extends "desafio/base.html" %}
+
+{% block contenido %}
+<div>
+    <h2>Página de usuario</h2>
+    <div>
+        <button>
+            <a href="{% url 'form.registro.usuario' %}">Registrar un usuario</a>
+        </button>
+        <button>
+            <a href="{% url 'form.busqueda.usuario' %}">Buscar usuario</a>
+        </button>
+    </div>
+</div>
+    
+    
+{% endblock %}

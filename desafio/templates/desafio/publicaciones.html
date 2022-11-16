@@ -1,0 +1,13 @@
+{% extends "desafio/base.html" %}
+
+{% block contenido %}
+<h2>Enviar publicacion</h2>
+<div>
+    <form action="" method="post">{% csrf_token %}
+        <table>
+        {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+{% endblock %}

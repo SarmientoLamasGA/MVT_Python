@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <nav>
+        <button>
+            <a href="{% url 'inicio' %}">Inicio</a>
+        </button>
+        <button>
+            <a href="{% url 'publicaciones' %}">Publicaciones</a>
+        </button>
+        <button>
+            <a href="{% url 'productos' %}">Productos</a>
+        </button>
+        <button>
+            <a href="{% url 'usuario' %}">Usuario</a>
+        </button>
+    </nav>
+
+    {% block contenido %}
+
+    {% endblock %}
+    
+</body>
+</html>
