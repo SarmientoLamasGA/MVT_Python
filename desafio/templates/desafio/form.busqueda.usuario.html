@@ -9,15 +9,15 @@
     </form>
 </div>
 <div>
-    {% if busquedaUsuario %}
+    {% if usuarios %}
         <h3>Resultados de búsqueda</h3>
-        {% for usuario in busquedaUsuario %}
+        {% for usuario in usuarios %}
             <div>
                 <p>El usuario {{usuario.username}} se registró con el nombre de {{usuario.nombre}}</p>
             </div>
         {% endfor %}
     {% else %}
-        <p>No hay usuarios registrados con ese nombre</p>
+        <p>{{usuarios}}</p>
     {% endif %}
     </div>
 {% endblock %}
