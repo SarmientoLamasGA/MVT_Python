@@ -2,17 +2,20 @@
 
 {% block contenido %}
 <div>
-    <h2>Buscar usuario por nombre</h2>
-    <form action="" method="get">
+    <div>
+        <h2>Buscar usuario por nombre</h2>
+        <form action="" method="get" class="container-fluid form-control form-control-lg">
         <label for="Nombre"></label><input type="text" name="nombre" id="nombre" maxlength="40">
         <input type="submit" value="Buscar este usuario">
-    </form>
+        </form>
+    </div>
+    
 </div>
 <div>
     {% if usuarios %}
-        <h3>Resultados de búsqueda</h3>
+        <h3 class="container-fluid">Resultados de búsqueda</h3>
         {% for usuario in usuarios %}
-            <div>
+            <div class="container-fluid bg-info py-3">
                 <p>El usuario {{usuario.username}} se registró con el nombre de {{usuario.nombre}}</p>
             </div>
         {% endfor %}

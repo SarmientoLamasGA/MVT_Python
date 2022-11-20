@@ -49,6 +49,7 @@ def busquedaUsuario(request):
     if request.GET.get('nombre', False):
         nombre = request.GET['nombre']
         usuarios = Usuario.objects.filter(nombre__icontains=nombre)
+        return render(request, "desafio/form.busqueda.usuario.html", {"usuarios": usuarios})
     else:
         usuarios = "No hay datos registrados"
         return render(request,"desafio/form.busqueda.usuario.html", {"respuesta": usuarios})

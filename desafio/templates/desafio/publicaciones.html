@@ -3,11 +3,11 @@
 {% block contenido %}
 <h2>Enviar publicacion</h2>
 <div>
-    <form action="" method="post">{% csrf_token %}
+    <form action="" method="post" class="container-fluid form-control form-control-lg">{% csrf_token %}
         <table>
         {{ form.as_table }}
         </table>
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" class="btn btn-primary">
     </form>
 </div>
 {% endblock %}
